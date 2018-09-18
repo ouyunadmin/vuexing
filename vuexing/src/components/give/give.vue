@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       // render:
+      cart:true
     }
   },
   components: {
@@ -23,6 +24,7 @@ export default {
   },
   created() {
     this.$store.commit("addDemo", [5, 5]);
+    this.$store.commit("addShow",this.cart)
   }
 };
 </script>
