@@ -24,7 +24,7 @@ export default {
   },
   created() {
     this.$store.commit("addDemo", [5, 5]);
-    this.$store.commit("addShow",this.cart)
+    // this.$store.commit("addShow",this.cart)
   }
 };
 </script>
