@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c411bf19-2c02-4267-9ccc-2b1cef62c0fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vuexing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/.idea/dictionaries/mayn.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/.idea/闲时写写.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/flex布局.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/js缓动函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/弹幕.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/数组各方法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/数组指定排序.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/数组遍历.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/机械表/css.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/机械表/images/clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/机械表/images/hour.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/机械表/images/minute.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/机械表/images/second.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/机械表/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/机械表/time.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/贪吃蛇/css.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/贪吃蛇/foot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/贪吃蛇/game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/贪吃蛇/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/闲时写写/贪吃蛇/snake.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuexing/src/components/give/accept.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuexing/src/components/give/accept.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuexing/src/components/give/give.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuexing/src/components/give/give.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/闲时写写/拖动.html" beforeDir="false" afterPath="$PROJECT_DIR$/闲时写写/拖动.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/闲时写写/flex布局.html" beforeDir="false" afterPath="$PROJECT_DIR$/闲时写写/flex布局.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -186,8 +156,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/闲时写写/flex布局.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
-                  <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+                <state relative-caret-position="399">
+                  <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -354,12 +324,12 @@
       <workItem from="1539155104155" duration="4988000" />
       <workItem from="1539247029728" duration="101000" />
       <workItem from="1539247158700" duration="2004000" />
-      <workItem from="1539324899709" duration="6164000" />
+      <workItem from="1539324899709" duration="6805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23978000" />
+    <option name="totallyTimeSpent" value="24619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -484,8 +454,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/闲时写写/flex布局.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+        <state relative-caret-position="399">
+          <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
         </state>
       </provider>
     </entry>
