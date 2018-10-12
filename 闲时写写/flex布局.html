@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        .ul{
+
+        }
+        .ul li{
+            width: 100px;
+            height: 100px;
+            background-color: #000000;
+            display: flex;
+            margin: 20px auto 0;
+            border-radius: 5px;
+        }
+        .ul li span{
+            background-color: #cccccc;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .ul li:nth-child(1){
+            /* 主轴居中 */
+            justify-content: center;
+            /* Y轴居中 */
+            align-items:center;
+        }
+        .ul li:nth-child(1) span{width: 40px;height: 40px;}
+        .ul li:nth-child(2){
+            /*X*/
+            justify-content: space-around;
+            /*Y*/
+            align-items: center;
+        }
+        .ul li:nth-child(3){
+            /*改变主轴方向*/
+            flex-direction: column;
+            justify-content: space-around;
+            /*Y*/
+            align-items: center;
+        }
+        .ul li:nth-child(3) span:nth-child(1){align-self:flex-start}
+        /*.ul li:nth-child(3) span:nth-child(2){align-self:center}*/
+        .ul li:nth-child(3) span:nth-child(3){align-self:flex-end}
+        .ul li:nth-child(4){
+            /*X*/
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /*Y*/
+            align-content: space-around;
+        }
+        .ul li:nth-child(4) span{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex布局</h1>
+    <ul class="ul">
+        <li>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+    </ul>
+</body>
+</html>

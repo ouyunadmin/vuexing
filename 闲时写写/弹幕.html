@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>弹幕</title>
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .div{
+      position: fixed;
+      bottom: 30px;
+      text-align: center;
+      background-color: #ccc;
+      width: 100%;
+      padding: 20px 0;
+      /* transform: translate() */
+    }
+    .div span{
+      /* transition: all 5s */
+    }
+    .demo{
+      height: 500px;
+      background-color: rgba(0, 0, 0, .1);
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo" id="de">
+
+  </div>
+  <div class="div" id="div">
+    <input type="text" id="ipt">
+    <button id="btn">发射</button>
+  </div>
+  <script>
+    let de = document.getElementById("de")
+    let inp = document.getElementById("ipt")
+    let btn = document.getElementById("btn")
+
+    function ok() {
+      // 获取input 里面的值
+      let val = inp.value
+      inp.value = ''
+      var span = document.createElement("span")
+      span.style.position = 'absolute'
+      //高 随机数
+      let Y = parseInt(Math.random() * 480)
+      let L = document.body.clientWidth
+      span.style.top = Y + 'px'
+      span.style.left = L + 'px'
+      span.innerText = val
+      de.appendChild(span)
+      // span 从左往右移动
+      setInterval(() => {
+        span.style.left = (L += -2) + 'px'
+          
+        if (L <= 0) {
+          console.log(111);       
+        }
+
+      }, 10)
+      // 当文字移动到最左边时，删除dom元素
+
+
+    }
+    btn.addEventListener('click', ok)
+    window.addEventListener('keydown', function (e) {
+      // console.log(e.keyCode);
+      if (e.keyCode == 13) {
+        ok()
+      }
+    })
+  </script>
+</body>
+
+</html>

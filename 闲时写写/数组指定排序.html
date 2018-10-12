@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组指定排序</title>
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .div {
+      width: 100px;
+      height: 100px;
+      background: #ccc;
+      border-radius: 10px;
+      /* margin: 10px; */
+      /* position: relative; */
+      /* position: absolute; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div" id="div">
+ 
+  </div>
+  <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(fruits)
+	// 删除指定位置数组，并返回删除的数组，会改变原数组
+	var str = fruits.splice(2,1);
+	// console.log(str)
+	console.log(fruits)
+	// fruits.unshift(str[0]);
+	// unshift 在数组最前面添加一个元素
+	fruits.unshift(str[0])
+	console.log(fruits)
+	// console.log(fruits.unshift(str[0]))
+  </script>
+</body>
+
+</html>

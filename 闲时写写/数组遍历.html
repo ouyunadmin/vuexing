@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        h1{text-align: center}
+    </style>
+</head>
+<body>
+<h1>数组遍历</h1>
+<script>
+    // for 循环遍历
+    function arr1() {
+        let a = [1,5,6,8,4,5,1]
+        for (var i=0; i<a.length; i++){
+            // console.log(i + '=' + 'i')
+            // console.log(a[i])
+        }
+        // 排序
+        for(var i=0; i<a.length; i++){
+            for(var j=0; j<a.length; j++){
+                var temp = ''
+                if(a[i][j] > a[i][j+1]){
+                    a[i][j+1] = a[i][j]
+                    temp = a[i][j+1]
+                    a[i][j] = temp
+                }
+            }
+        }
+        console.log(a)
+    }
+    arr1()
+</script>
+</body>
+</html>

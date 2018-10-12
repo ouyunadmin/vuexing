@@ -10,7 +10,8 @@
     </ul> -->
     <!-- {{localSt}} -->
     <!-- {{getDemo}} -->
-    {{ doneTodosCount }}
+    <!--{{ doneTodosCount }}-->
+    {{zidemo}}
   </div>
 </template>
 <script>
@@ -19,7 +20,8 @@ import { mapGetters } from "vuex";
 export default {
   data(){
     return{
-      info: 100
+      info: 100,
+      zi:''
     }
   },
   // computed: mapGetters(['getDemo'])
@@ -33,9 +35,15 @@ export default {
   // }
   computed: {
     doneTodosCount (){
-      return this.$store.getters.getAcc
-    }
-  }
+      return this.$store.getters.getDemo
+    },
+
+  },
+  created(){
+    console.log(this.zidemo)
+    this.$emit('this.info')
+  },
+  props:['zidemo']
 };
 </script>
 <style>

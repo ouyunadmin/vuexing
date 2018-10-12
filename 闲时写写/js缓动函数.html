@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>未完成</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #00aa00;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn1">左400</button>
+    <button class="btn2">100</button>
+    <div class="box">
+        要移动的盒子
+    </div>
+    <script>
+        let box = document.querySelector('.box')
+        let btn1 = document.querySelector('.btn1')
+        let btn2 = document.querySelector('.btn2')
+
+        btn1.addEventListener('click',function () {
+            animate(box,400)
+        })
+        btn2.addEventListener('click',function () {
+            animate(box,100)
+        })
+
+        function animate(element,tar) {
+            let clear = null
+            let flag = true
+            // 当前位置
+            let current = element.offsetLeft
+            // 目标距离
+            let target = tar
+            if(flag){
+                // console.log(1111)
+                clearInterval(clear)
+            }
+            clear = setInterval(function () {
+                // 每次移动的距离
+                let num = 4
+                // 是否移动到终点
+                let step = current < target ? num : -num
+                if(Math.abs(current - target) > Math.abs(num) ){
+                    current += step
+                    element.style.left = current + 'px'
+                }else{
+                    element.style.left = target + 'px'
+
+                }
+                if(current != target){
+                    flag = false
+
+                }
+                if(flag){
+                    clearInterval(clear)
+                }
+            },20)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+    <h1>数组</h1>
+    <script>
+        // join
+        function arr1() {
+            let ab = ['a','b','c','a']
+            // join 返回新数组，不会改变原有数组
+            let newa = ab.join('-')
+            console.log(newa)
+            console.log(ab)
+        }
+        // concat
+        function arr2(){
+            let ab = ['a','b','c','a']
+            let ac = ['e','f']
+            // concat 合并数组，返回新组合的数组，不会改变原有数组
+            let newa = ab.concat(ac)
+            console.log(newa)
+            console.log(ab)
+        }
+        // pop
+        function arr3(){
+            let ab = ['a','b','c','a']
+            // pop 返回删除的最后一个元素，改变原有数组
+            let newa = ab.pop()
+            console.log(ab)
+            console.log(newa)
+        }
+        // push
+        function arr4(){
+            let ab = ['a','b','c','a']
+            let ac = ['e','f']
+            let ad = 'g'
+            // push 直接修改原数组，不返回新数组，将新元素添加到数组的最后面，改变原有数组
+            // let newa = ab.push(ac)
+            let newa = ab.push(ad)
+            console.log(newa)
+            console.log(ab)
+        }
+        // reverse
+        function arr5(){
+            let ab = ['a','b','c','a']
+            // reverse 直接修改原数组,不返回新数组,将数组中的元素颠倒顺序
+            let newa = ab.reverse()
+            console.log(newa)
+            console.log(ab)
+        }
+        // shift
+        function arr6(){
+            let ab = ['a','b','c','a']
+            // shift 将数组的第一个元素移出数组，返回移出的数组，改变原有数组
+            let newa = ab.shift()
+            console.log(newa)
+            console.log(ab)
+        }
+        // slice
+        function arr7(){
+            let ab = ['a','b','c','a']
+            // 返回删除的元素，不改变原数组
+            let newa = ab.slice(0,1) //  从第一个开始删除1个元素
+            let newb = ab.slice(-2,1) // 从最后第二个开始删除1个元素
+            console.log(newa)
+            console.log(newb)
+            console.log(ab)
+        }
+        // sort
+        function arr8() {
+            let ab = ['a','b','c','a']
+            let ac = ['aa','ab','ad']
+            let ad = [11,12,7,21,3,4]
+            // 对数组进行排序，改变原数组,不生成副本
+            let newb = ab.sort() // 按首字母进行排序
+            // console.log(newb)
+            // console.log(ab)
+            // console.log(ac)
+            // ad.sort() // 按第1位数字进行排序
+            ad.sort(function (a,b) { // 按num大小进行排序
+                return a-b
+            })
+            console.log(ad)
+
+        }
+        // splice
+        function arr9(){
+            let ab = ['a','b','c','a']
+            let newa = ab.splice(0,1)
+            // 对数组元素进行删除操作，返回删除的元素，并改变原数组
+            console.log(newa)
+            console.log(ab)
+        }
+        // toLocaleString
+        function arr10(){
+            let ab = ['a','b','c','a']
+            // 返回数组拆分成特定分隔符分隔的字符串,不改变原数组（把数组拆分在字符串）
+            let newa = ab.toLocaleString()
+            console.log(newa)
+            console.log(ab)
+        }
+        // toString
+        function arr11(){
+            let ab = ['a','b','c','a']
+            let newa = ab.toString()
+            console.log(newa)
+            console.log(ab)
+        }
+        // unshift
+        function arr12(){
+            let ab = ['a','b','c','a']
+            let ac = 'e'
+            // 在数组前面插入一个或多个元素，不返回新数组，改变原数组
+            let newa = ab.unshift(ac)
+            let newb = ab.unshift('g',['h','k'])
+            // console.log(newa)
+            console.log(newb)
+            console.log(ab)
+        }
+        // arr1()
+        // arr2()
+        // arr3()
+        // arr4()
+        // arr5()
+        // arr6()
+        // arr7()
+        // arr8()
+        // arr9()
+        // arr10()
+        // arr11()
+        arr12()
+
+    </script>
+</body>
+</html>

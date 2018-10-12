@@ -2,7 +2,7 @@
   <div>
     give往vuex中传值
     <button @click="onClick">++++++</button>
-    <accept></accept>
+    <accept :zidemo = 'parrent' v-bind=""></accept>
   </div>
 </template>
 <script>
@@ -11,7 +11,9 @@ export default {
   data() {
     return {
       // render:
-      cart:true
+      cart:true,
+      // 组件传值 父传子
+      parrent: 99
     }
   },
   components: {
@@ -20,7 +22,11 @@ export default {
   methods: {
     onClick() {
       this.$store.commit("addDemo", [Math.random(), 7]);
-    }
+    },
+    // 父传子
+    // pdemo: function () {
+    //   console.log(888)
+    // }
   },
   created() {
     this.$store.commit("addDemo", [5, 5]);
