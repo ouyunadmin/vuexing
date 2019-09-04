@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <title>keyboard control 1</title>
+    <style>
+        tr.highlight{background:#08246B;color:white;}
+	</style>
+</head>
+
+<body>
+    <table border="1" width="70%" id="ice">
+        <tr>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+        </tr>
+        <tr>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+        </tr>
+        <tr>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+        </tr>
+        <tr>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+        </tr>
+        <tr>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+            <td><input type='text'></td>
+        </tr>
+    </table>
+    <script language="javascript">
+        //定义初始化行列
+        var currentLine = 0; // 目前的行号
+        var currentCol = 0;
+        var objtab = document.all.ice;
+        var colums = objtab.rows[4].cells.length;
+        var objrow = objtab.rows[0].getElementsByTagName("INPUT");
+        objrow[0].select();
+        document.body.onkeydown = function (e) {
+            e = window.event || e;
+            switch (e.keyCode) {
+                case 37: //左键
+                    currentCol--;
+                    changeItem(e);
+                    break;
+                case 38: //向上键
+                    currentLine--;
+                    changeItem(e);
+                    break;
+                case 39: //右键
+                    currentCol++;
+                    changeItem(e);
+                    break;
+                case 40: //向下键
+                    currentLine++;
+                    changeItem(e);
+                    break;
+                default:
+                    break;
+            }
+        }
+        //方向键调用
+        function changeItem(e) {
+            if (document.all) { //如果是IE
+                var it = document.getElementById("ice").children[0]; //获取table表单元素
+            } else { //其他浏览器
+                var it = document.getElementById("ice");
+            }
+
+            if (e.keyCode == 37 || e.keyCode == 39) {
+                if (currentLine < 0) { //如果行小于0
+                    currentLine = it.rows.length - 1;
+                }
+                if (currentLine == it.rows.length) {
+                    currentLine = 0;
+                }
+                var objtab = document.all.ice;
+                var objrow = objtab.rows[currentLine].getElementsByTagName("INPUT");
+
+
+                if (currentCol < 0) {
+
+                    if (e.keyCode == 37) {
+                        currentLine--;
+                        if (currentLine < 0) { //如果行小于0
+                            currentLine = it.rows.length - 1;
+                        }
+                        objrow = objtab.rows[currentLine].getElementsByTagName("INPUT");
+                    }
+                    currentCol = objrow.length - 1;
+                }
+
+                if (currentCol >= objrow.length) {
+                    if (e.keyCode == 39) {
+                        currentLine++;
+                        if (currentLine == it.rows.length) {
+                            currentLine = 0;
+                        }
+                        objrow = objtab.rows[currentLine].getElementsByTagName("INPUT");
+                    }
+                    currentCol = 0;
+
+                }
+            } else {
+                if (currentLine < 0) { //如果行小于0
+                    currentLine = it.rows.length - 1;
+                    currentCol--;
+                    if (currentCol < 0) {
+                        currentCol = colums - 1;
+                    }
+                }
+                if (currentLine == it.rows.length) {
+                    currentLine = 0;
+                    currentCol++;
+                    if (currentCol >= colums) {
+                        currentCol = 0;
+                    }
+                }
+                var objtab = document.all.ice;
+                var objrow = objtab.rows[currentLine].getElementsByTagName("INPUT");
+                while (e.keyCode == 40 && objrow[currentCol] == undefined) {
+                    currentLine++;
+                    objrow = objtab.rows[currentLine].getElementsByTagName("INPUT");
+                }
+                while (e.keyCode == 38 && objrow[currentCol] == undefined) {
+                    currentLine--;
+                    objrow = objtab.rows[currentLine].getElementsByTagName("INPUT");
+                }
+
+            }
+            objrow[currentCol].select();
+        }
+    </script>
+</body>
+
+</html>

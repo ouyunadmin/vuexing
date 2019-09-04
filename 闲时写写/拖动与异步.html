@@ -34,6 +34,24 @@
     <input type="radio" name="1" value="1">4<br />
   </div>
   <script>
+    // 异步、语法糖
+    async function getStockPriceByName(name) {
+      const symbol = await getStockSymbol(name);
+      const stockPrice = await getStockPrice(symbol);
+      return stockPrice;
+    }
+    getStockPriceByName('goog').then(function (result) {
+      // console.log(result);
+    })
+    function getStockSymbol() {
+      // console.log(111)
+    }
+    function getStockPrice() {
+      // console.log(222)
+    }
+    function stockPrice() {
+      // console.log(333)
+    }
     var div = document.getElementById("div")
     div.addEventListener('mousedown', function (e) { // 鼠标按下时
       // 获取按下在盒子中的位置
