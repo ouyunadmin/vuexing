@@ -41,6 +41,8 @@ export default new Vuex.Store({
     }
   },
   actions: {
-
+    addCurrent({ commit }, cart) { 
+      commit('addDemo', cart)
+    },
   }
 })

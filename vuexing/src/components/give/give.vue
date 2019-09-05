@@ -22,6 +22,7 @@ export default {
   methods: {
     onClick() {
       this.$store.commit("addDemo", [Math.random(), 7]);
+      // this.$store.dispatch("addCurrent", [Math.random(), 7]);
     },
     // 父传子
     // pdemo: function () {
@@ -31,6 +32,21 @@ export default {
   created() {
     this.$store.commit("addDemo", [5, 5]);
     // this.$store.commit("addShow",this.cart)
+              //  else if ( event.keyCode === 37 ) {
+              //       if (current <= 0) {
+              //         current = 0
+              //       } else {
+              //         current--
+              //       }
+              //       setTimeout(() => {
+              //         /*
+              //         * 表单select，blur事件，自动聚焦时隐藏下拉框选项菜单
+              //         */
+              //         _that.$refs.PageForm.selectBlur()
+              //         _that.autoFocus(current)
+              //       }, 100)
+              //       return false
+              //   }
   }
 };
 </script>
