@@ -11,11 +11,11 @@ function time() {
   let newS = time.getSeconds() + newHs/1000
   let newM = time.getMinutes() + newS/60
   let newH = time.getHours() + newM/60
-  // 旋转角度
+  // 旋转角度美肆无忌惮肆显示显 
   h.style.transform = 'rotate('+ newH*30 +'deg)'
   m.style.transform = 'rotate('+ newM*6 +'deg)'
   s.style.transform = 'rotate('+ newS*6 +'deg)'
 }
 time()
 
-setInterval(time ,20)
+setInterval(time ,20) 
